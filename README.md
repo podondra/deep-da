@@ -47,7 +47,7 @@ http://dr5.lamost.org/catalogue.
 ### LAMOST Quasar Catalog
 
 LAMOST QSO catalogs are described on:
-http://explore.china-vo.org/article/20190107155838.
+http://explore.china-vo.org/data/lamost-quasar/intro.
 
 The main file is `dr4dr5_qso_massflagged_v04.fits` of DR4 and DR5.
 
