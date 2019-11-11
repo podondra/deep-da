@@ -3,3 +3,4 @@ data/
 figs/*.pdf
 venv/
 worksheet.ipynb
+__pycache__/
