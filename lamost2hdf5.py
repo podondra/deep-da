@@ -25,9 +25,10 @@ if __name__ == "__main__":
             filepath = path.join(LAMOST_DR5, dr_path)
             with fits.open(filepath) as hdul:
                 data = hdul[0].data
-                group = f.create_group(filename)
-                group.create_dataset("flux", data=data[0], dtype=DT)
-                group.create_dataset("inverse", data=data[1], dtype=DT)
-                group.create_dataset("wavelength", data=data[2], dtype=DT)
-                group.create_dataset("andmask", data=data[3], dtype=DT)
-                group.create_dataset("ormask", data=data[4], dtype=DT)
+                planid_group = f.require_group(spec["planid"])
+                g = planid_group.create_group(filename)
+                g.create_dataset("flux", data=data[0], dtype=DT)
+                #g.create_dataset("inverse", data=data[1], dtype=DT)
+                g.create_dataset("wavelength", data=data[2], dtype=DT)
+                #g.create_dataset("andmask", data=data[3], dtype=DT)
+                #g.create_dataset("ormask", data=data[4], dtype=DT)
