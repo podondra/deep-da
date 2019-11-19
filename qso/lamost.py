@@ -1,5 +1,6 @@
 from os import path
 
+from astropy.time import Time
 import pandas as pd
 
 
@@ -31,6 +32,16 @@ def get_spec_filename(spec):
     fiberid = spec["fiberid"]
     filename_str = "spec-{}-{}_sp{:02d}-{:03d}.fits.gz"
     return filename_str.format(lmjd, planid, spid, fiberid)
+
+
+def get_filename(planid, lmjd, spid, fiberid):
+    filename_str = "spec-{}-{}_sp{:02d}-{:03}.fits.gz"
+    return filename_str.format(lmjd, planid, spid, fiberid)
+
+
+def get_dr_path(planid, lmjd, spid, fiberid):
+    obsdate = Time(lmjd - 1, format="mjd").datetime.strftime("%Y%m%d")
+    return path.join(obsdate, planid, get_filename(planid, lmjd, spid, fiberid))
 
 
 def get_spec_filepath(spec, filename):
