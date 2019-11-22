@@ -35,7 +35,7 @@ if __name__ == "__main__":
     filename = grp.require_dataset(
             "filename",
             shape=(catalog.shape[0], ),
-            dtype="S30"
+            dtype="S48"
             )
 
     for i, index in enumerate(tqdm(catalog.index)):
