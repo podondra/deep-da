@@ -4,6 +4,12 @@ from astropy.time import Time
 import pandas as pd
 
 
+def parse_filename(filename):
+    _, lmjd, planid_spid, fiberid = filename.split("-")
+    planid, spid = planid_spid.split("_sp")
+    return planid, int(lmjd), int(spid), int(fiberid[:3])
+
+
 def read_general_catalog(catalog_path):
     return pd.read_csv(
 	catalog_path,

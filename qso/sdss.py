@@ -3,6 +3,11 @@ from os import path
 import pandas as pd
 
 
+def parse_filename(filename):
+    _, plate, mjd, fiberid = filename.split("-")
+    return int(plate), int(mjd), int(fiberid[:4])
+
+
 def read_selected_catalog(filepath):
     return pd.read_csv(
         filepath,
