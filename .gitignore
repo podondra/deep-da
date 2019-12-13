@@ -5,4 +5,4 @@ venv/
 worksheet.ipynb
 __pycache__/
 runs/
-old/
+misc/
