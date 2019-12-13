@@ -1,2 +1,6 @@
+import numpy as np
+
+
 WAVEMIN, WAVEMAX = 3.5843, 3.9501
 N_WAVELENGTHS = 3659
+WAVES = np.logspace(WAVEMIN, WAVEMAX, N_WAVELENGTHS)
