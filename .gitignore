@@ -4,3 +4,5 @@ figs/*.pdf
 venv/
 worksheet.ipynb
 __pycache__/
+runs/
+old/
