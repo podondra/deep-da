@@ -1,4 +1,10 @@
+from os import path
+
 from torch.utils.data import Dataset
+
+
+SDSS_DATASET = path.join("data", "sdss", "sdss_dataset.hdf5")
+LAMOST_DATASET = path.join("data", "lamost", "lamost_dataset.hdf5")
 
 
 class HDF5Dataset(Dataset):
