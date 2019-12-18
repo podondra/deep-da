@@ -1,4 +1,5 @@
 import numpy as np
+from torch import nn
 
 
 WAVEMIN, WAVEMAX = 3.5843, 3.9501
