@@ -10,9 +10,6 @@ rc("font", family="serif")
 rc("text", usetex=True)
 
 
-DATA_DIR = Path("data")
-
-
 if __name__ == "__main__":
     gammas = [0.1, 0.3, 1, 3, 10]
     src_f1 = [0.9388, 0.931, 0.9095, 0.7069, 0.8473]
